@@ -37,15 +37,18 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## GitHub Pages (static hosting)
 
-The site is configured for static export and deploys automatically to GitHub Pages on every push to `main`.
+The site deploys automatically to the `gh-pages` branch on every push to `main`.
 
 **Live URL:** [https://cllom.github.io/interior-design-engine/](https://cllom.github.io/interior-design-engine/)
 
-### One-time setup (if not already enabled)
+### One-time setup (required)
 
-1. Open the repo on GitHub → **Settings** → **Pages**
-2. Under **Build and deployment**, set **Source** to **GitHub Actions**
-3. Push to `main` — the workflow in `.github/workflows/deploy.yml` builds and publishes the `out/` folder
+1. Open [Settings → Pages](https://github.com/cllom/interior-design-engine/settings/pages)
+2. Under **Build and deployment** → **Source**, choose **Deploy from a branch**
+3. Set **Branch** to `gh-pages` and folder to `/ (root)`, then click **Save**
+4. Push to `main` or re-run the [Deploy workflow](https://github.com/cllom/interior-design-engine/actions/workflows/deploy.yml)
+
+The first successful workflow run creates the `gh-pages` branch. After step 3, the site goes live within a minute.
 
 ### Local static preview (matches GitHub Pages)
 
